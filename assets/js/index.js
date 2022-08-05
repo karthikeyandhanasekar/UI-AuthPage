@@ -82,8 +82,8 @@ const onsubmit = (e) => {
         isvalid = false
         return
     }
-    else if (password.length < 4 || password.length > 10) {
-        document.querySelector(`#password-error`).innerHTML = 'Password Must have between 4 to 10 Characters'
+    else if (password.length < 8 || password.length > 16) {
+        document.querySelector(`#password-error`).innerHTML = 'Password Must have between 8 to  Characters'
         isvalid = false
     }
 
@@ -176,8 +176,8 @@ const validpassword = (e) => {
         document.querySelector(`#${id}-error`).innerHTML = "Password Required"
         return
     }
-    if (value.length < 4 || value.length > 10) {
-        document.querySelector(`#${id}-error`).innerHTML = " Password much contain between 4 to 10 Characters."
+    if (value.length < 8 || value.length > 16) {
+        document.querySelector(`#${id}-error`).innerHTML = " Password much contain between 8 to 16 Characters."
         return
     }
 
