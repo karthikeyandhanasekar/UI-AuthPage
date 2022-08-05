@@ -44,10 +44,11 @@
                                 d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z" />
                         </svg>
                         <input type="text" name="firstname" id="firstname" class="  border border-0 "
-                            placeholder="First name" />
+                            placeholder="First name" required />
                     </div>
+                    <p class="text-danger" id="firstname-error"></p>
 
-                    <!-- First Name -->
+                    <!-- Last Name -->
                     <div class=" border-bottom border-dark mb-4  text-left pb-2 d-flex flex-row ">
                         <svg class="me-4" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path
@@ -56,7 +57,7 @@
                         <input type="text" name="lastname" id="lastname" class="  border border-0 "
                             placeholder="Last name" />
                     </div>
-
+                    <p class="text-danger" id="lastname-error"></p>
                     <!-- Email  -->
                     <div class=" border-bottom border-dark mb-4  text-left pb-2 d-flex flex-row">
                         <svg class="me-4" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -65,6 +66,7 @@
                         </svg>
                         <input type="email" name="email" id="email" class="  border border-0 " placeholder="Email" />
                     </div>
+                    <p class="text-danger" id="email-error"></p>
 
                     <!-- Password -->
                     <div class=" border-bottom border-dark mb-4  text-left pb-2 d-flex flex-row">
@@ -75,6 +77,7 @@
                         <input type="password" name="password" id="password" class="  border border-0 "
                             placeholder="Password ..." />
                     </div>
+                    <p class="text-danger" id="password-error"></p>
 
                     <!-- RePassword -->
                     <div class=" border-bottom border-dark mb-4  text-left pb-2 d-flex flex-    ">
@@ -85,6 +88,8 @@
                         <input type="password" name="repassword" id="repassword" class="  border border-0 "
                             placeholder="Retype Password ..." />
                     </div>
+                    <p class="text-danger" id="repassword-error"></p>
+
                     <div class="float-end">
                         <button type="submit" class="d-block btn rounded-pill fw-bold px-4 ">Register</button>
 
@@ -108,6 +113,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
 <script defer src="./assets/js/index.js"></script>
 
