@@ -19,7 +19,7 @@ $(document).ready(function () {
 const onsubmit = (e) => {
     e.preventDefault()
 
-    const namepattern = /^[A-Za-z]+$/
+    const namepattern = /^[A-Za-z\s]+$/
     const emailpattern = pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
     const forms = document.forms['registration']
@@ -122,12 +122,12 @@ const onsubmit = (e) => {
 const validatetext = (e) => {
 
 
-    const value = e.target.value
+    const value = e.target.value.trim()
     const id = e.target.id
     const name = e.target.name
     let namevalue = 'Name', errormsg = 'No Special Character/Number'
 
-    let pattern = /^[A-Za-z]+$/g // check if special character/number contains
+    let pattern = /^[A-Za-z\s]+$/ // check if special character/number contains
     document.querySelector(`#${id}-error`).innerHTML = ""
 
     if (name === "email") {
@@ -149,7 +149,7 @@ const validatetext = (e) => {
 }
 
 // const validemail = (e) => {
-//     const value = e.target.value
+//     const value = e.target.value.trim()
 //     const id = e.target.id
 //     const pattern = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/g // check if it valid email
 
@@ -167,7 +167,7 @@ const validatetext = (e) => {
 // }
 
 const validpassword = (e) => {
-    const value = e.target.value
+    const value = e.target.value.trim()
     const id = e.target.id
 
     document.querySelector(`#${id}-error`).innerHTML = ""
@@ -184,7 +184,7 @@ const validpassword = (e) => {
 }
 
 const checkpassword = (e) => {
-    const value = e.target.value
+    const value = e.target.value.trim()
     const id = e.target.id
 
     const originalpassword = document.querySelector('#password').value
