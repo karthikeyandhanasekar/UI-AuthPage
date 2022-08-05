@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+}
+
+body, button[type=submit] {
+    background: rgb(175, 153, 212);
+    background: -moz-linear-gradient(139deg, rgba(175, 153, 212, 1) 17%, rgba(153, 205, 212, 1) 53%);
+    background: -webkit-linear-gradient(139deg, rgba(175, 153, 212, 1) 17%, rgba(153, 205, 212, 1) 53%);
+    background: linear-gradient(139deg, rgba(175, 153, 212, 1) 17%, rgba(153, 205, 212, 1) 53%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#af99d4", endColorstr="#99cdd4", GradientType=1);
+
+}
+
+main {
+    height: inherit;
+}
+
+section {
+    height: inherit;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+input {
+    width: 100%;
+}
