@@ -16,6 +16,16 @@ $(document).ready(function () {
 
 
 
+const onsubmit = (e) => {
+    e.preventDefault()
+    alert('submitted')
+    document.querySelector("#registration").reset();
+
+}
+
+
+
+
 
 const validatetext = (e) => {
     const value = e.target.value
@@ -55,7 +65,6 @@ const validpassword = (e) => {
     const value = e.target.value
     const id = e.target.id
 
-    console.log(value.length < 4 || value.length > 10);
     document.querySelector(`#${id}-error`).innerHTML = ""
 
     if (value.length === 0) {
@@ -76,10 +85,12 @@ const checkpassword = (e) => {
     const originalpassword = document.querySelector('#password').value
     document.querySelector(`#${id}-error`).innerHTML = ""
 
-
     if (originalpassword !== value && value.length > 0) {
         document.querySelector(`#${id}-error`).innerHTML = " Password doesn't match."
         return
     }
 
 }
+
+
+document.querySelector('#registration').addEventListener('submit', onsubmit)
