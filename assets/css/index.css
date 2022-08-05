@@ -26,3 +26,9 @@ input:focus {
 input {
     width: 100%;
 }
+
+/* .roundedright {
+    content: '';
+    border: solid red;
+    border-radius: 200px 0px 0px 200px;
+} */
